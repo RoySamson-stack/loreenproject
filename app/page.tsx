@@ -126,7 +126,7 @@ export default function BirthdayPage() {
               <h2 className="text-2xl md:text-3xl font-bold text-black mb-4">⏰ Countdown to Magic ⏰</h2>
 
               <div className="text-black text-center space-y-4">
-                <p className="text-lg md:text-xl opacity-90 font-medium">Kenya Time (EAT)</p>
+                {/* <p className="text-lg md:text-xl opacity-90 font-medium">Kenya Time (EAT)</p> */}
 
                 <div className="grid grid-cols-3 gap-4 max-w-md mx-auto">
                   <div className="bg-white/20 rounded-xl p-4 md:p-6 backdrop-blur-sm">
