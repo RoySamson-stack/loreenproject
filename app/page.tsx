@@ -16,12 +16,20 @@ export default function BirthdayPage() {
   const [isPlaying, setIsPlaying] = useState(false)
   const [audioElement, setAudioElement] = useState<HTMLAudioElement | null>(null)
 
-  const birthdayImages = [
+    const birthdayImages = [
     "/WhatsAppImage(1).jpeg?height=200&width=700&text=Happy+Birthday+🎂",
     "/WhatsAppImage(2).jpeg?height=500&width=700&text=Beautiful+Memories+💝",
     "/WhatsAppImage(3).jpeg?height=500&width=700&text=Celebration+Time+🎉",
     "/WhatsAppImage(4).jpeg?height=500&width=700&text=Joy+and+Love+❤️",
     "/WhatsAppImage (5).jpeg?height=500&width=700&text=Special+Moments+✨",
+    "/WhatsAppImage6.jpeg?height=500&width=700&text=Birthday+Vibes+🎈",
+    "/WhatsAppImage(7).jpeg?height=500&width=700&text=Cheers+to+You+🥳",
+    "/WhatsAppImage(8).jpeg?height=500&width=700&text=You+Are+Loved+💖",
+    "/WhatsAppImage(9).jpeg?height=500&width=700&text=Birthday+Joy+🎊",
+    "/WahatsAppImage(10).jpeg?height=500&width=700&text=Happy+Birthday+June+Daah+🎂",
+    "/WhatsAppImage(11).jpeg?height=500&width=700&text=Birthday+Memories+🌟",
+    "/WhatsAppImage(12).jpeg?height=500&width=700&text=Birthday+Love+💞",
+    "/WhatsAppImage(13).jpeg?height=500&width=700&text=Birthday+Wishes+🌸",
   ]
 
   const birthdayPoem = `
@@ -137,57 +145,9 @@ export default function BirthdayPage() {
   if (!isRevealed) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-blue-400 via-blue-500 to-blue-600 flex items-center justify-center p-4 relative overflow-hidden" style={{background: 'linear-gradient(135deg, #6495ED 0%, #FFF9F0 50%, #6495ED 100%)'}}>
-        {/* Floating hearts animation - smooth flow */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          {[...Array(25)].map((_, i) => (
-            <Heart
-              key={i}
-              className="absolute text-blue-800 opacity-70"
-              style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-                animation: `float ${8 + Math.random() * 6}s ease-in-out infinite`,
-                animationDelay: `${Math.random() * 8}s`,
-                transform: `translateY(${Math.random() * 20 - 10}px)`,
-              }}
-              size={12 + Math.random() * 20}
-            />
-          ))}
-        </div>
 
-        {/* Sparkles */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          {[...Array(15)].map((_, i) => (
-            <Sparkles
-              key={i}
-              className="absolute text-cyan-200 animate-pulse"
-              style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-                animationDelay: `${Math.random() * 2}s`,
-              }}
-              size={8 + Math.random() * 12}
-            />
-          ))}
-        </div>
 
-        {/* Custom CSS for smooth floating animation */}
-        <style jsx>{`
-          @keyframes float {
-            0%, 100% {
-              transform: translateY(0px) translateX(0px);
-            }
-            25% {
-              transform: translateY(-10px) translateX(5px);
-            }
-            50% {
-              transform: translateY(-5px) translateX(-5px);
-            }
-            75% {
-              transform: translateY(-15px) translateX(8px);
-            }
-          }
-        `}</style>
+
 
         <div className="text-center space-y-8 relative z-10 max-w-2xl mx-auto">
           <div className="animate-bounce">
@@ -244,59 +204,9 @@ export default function BirthdayPage() {
   // Birthday Reveal Screen
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-600 via-blue-700 to-indigo-900 relative overflow-hidden" style={{background: 'linear-gradient(135deg, #6495ED 0%, #FFF9F0 30%, #6495ED 70%, #FFF9F0 100%)'}}>
-      {/* Confetti Animation */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none z-10">
-        {[...Array(60)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute animate-bounce text-2xl"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 5}s`,
-              animationDuration: `${2 + Math.random() * 3}s`,
-            }}
-          >
-            {["🎉", "🎂", "🎈", "✨", "🎊", "💝", "🌟", "❤️", "🎁", "🥳"][Math.floor(Math.random() * 10)]}
-          </div>
-        ))}
-      </div>
 
-      {/* Floating hearts animation - smooth flow for birthday screen */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {[...Array(30)].map((_, i) => (
-          <Heart
-            key={i}
-            className="absolute text-blue-800 opacity-60"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animation: `float ${10 + Math.random() * 8}s ease-in-out infinite`,
-              animationDelay: `${Math.random() * 10}s`,
-              transform: `translateY(${Math.random() * 30 - 15}px)`,
-            }}
-            size={15 + Math.random() * 25}
-          />
-        ))}
-      </div>
 
-      {/* Custom CSS for smooth floating animation */}
-      <style jsx>{`
-        @keyframes float {
-          0%, 100% {
-            transform: translateY(0px) translateX(0px);
-          }
-          25% {
-            transform: translateY(-15px) translateX(8px);
-          }
-          50% {
-            transform: translateY(-8px) translateX(-8px);
-          }
-          75% {
-            transform: translateY(-20px) translateX(12px);
-          }
-        }
-      `}</style>
+
 
       {/* Music Control */}
       <div className="fixed top-6 right-6 z-20">
@@ -312,7 +222,7 @@ export default function BirthdayPage() {
       <div className="container mx-auto px-4 py-8 relative z-10">
         {/* Header */}
         <div className="text-center mb-12 animate-fade-in">
-          <h1 className="text-4xl md:text-7xl font-bold text-black mb-6 animate-bounce">🎂 HAPPY BIRTHDAY JUNE! 🎂</h1>
+          <h1 className="text-4xl md:text-7xl font-bold text-black mb-6 animate-bounce">❤️ 𝐻𝐴𝑃𝑃𝑌  𝐵𝐼𝑅𝑇𝐻𝐷𝐴𝑌  𝐽𝑈𝑁𝐸! ❤️</h1>
           <p className="text-2xl md:text-3xl text-black/90 font-medium">Your special day is finally here! 🥳</p>
         </div>
 
